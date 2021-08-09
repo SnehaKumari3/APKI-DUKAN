@@ -1,13 +1,477 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:wght@300;400;700&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style-type: none;
+}
+body {  
+  font-family: 'Montserrat',sans-serif;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: green;
+}
+.header .links{
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Montserrat',sans-serif;
+}
+.header .links .social-icons{
+  margin-right: 7px;
+}
+.header .links:hover{
+  border: 1px solid black;
+  box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
+  padding: 9px;
+  margin: 5px;
+  border-radius: 6px;
+}
+/*product*/
+.showcase{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(92, 189, 92,0.7)) ,url('./assets/image3.png') no-repeat center/cover;
+  height: 650px;
+}
+.showcase .overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  color: #fff;
+  background-color: rgba(245, 239, 239, 0.233);
+}
+.showcase .overlay h1{
+  font-size: 40px;
+  padding-bottom: 20px;
+  text-shadow: 0 3px 5px rgba(9, 10, 9, 0.864);
+  position: relative;
+  -webkit-text-stroke: 0.1vw green;
+}
+.showcase .overlay p{
+  font-family: MonteCarlo;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-shadow: 0 3px 5px rgba(38, 95, 38, 0.864);
+  margin-bottom: 10px;
+  color: black;
+
+}
+.showcase .overlay h1:hover{
+  color: rgb(253, 255, 255);
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: all 0.4s;
+  text-shadow: 0 2px 5px rgba(26, 95, 26, 0.864);
+}
+.grid{
+  padding: 50px;
+}
+.grid h3{
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  padding-bottom: 20px;
+  font-family: 'Montserrat',sans-serif;
+  text-shadow: 0 1px 2px rgba(26, 95, 26, 0.864);
+}
+.grid .grid-items div{
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(34, 152, 27, 0.864);
+}
+.grid .grid-items div:hover{
+  transform: translateY(-10px);
+    transition: all 0.4s;
+}
+.grid .grid-items div img{
+  border-radius: 10px;
+}
+.grid .grid-items div h4{
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: 'Montserrat',sans-serif;
+}
+.grid .grid-items div p{
+  line-height: 1.8;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 15px;
+}
+.grid .grid-items div{
+  margin: 5px auto 0;
+}
+.grid .grid-items div .links{
+  width: 130px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 8px;
+  margin-top: 10px;
+  padding: 10px 0;
+  color: black;
+  border: 0.5px solid green;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.grid .grid-items div .links span{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  z-index: -1;
+  transition: .5s;
+}
+.grid .grid-items div .links:hover span{
+  width: 100%;
+}
+/*Footer*/
+.footer div{
+  background-color: green;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer h4{
+  color: darkgreen;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.footer h4 .social-icons{
+  margin-right: 10px;
+  font-size: 20px;
+
+}
+.footer ul li{
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 900;
+}
+.footer ul li button .social-icons{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+}
+.footer ul li button{
+  background-color: transparent;
+  color: #fff;
+  padding: 13px;
+  border: none;
+  cursor: pointer;
+  font-family:Montserrat;
+  transition: background-color 0.4s ease-in-out;
+  letter-spacing: 1px;
+}
+.footer ul li button:hover{
+  font-weight: 1000;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
+}
+.footer ul li button .social-icons:hover{
+  color: black;
+}
+/* login & signup*/
+.login .form {
+   display: flex;
+   border-radius: 20px;
+   padding: 20px;
+   flex-direction: column;
+   box-shadow: 0 3px 5px rgba(34, 152, 27, 0.864);
+   background: #fff;
+   font-family: Montserrat;
+}
+.login .browse{
+  background: transparent;
+  box-shadow: none;
+}
+.login .form input{
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  font-size: 18pxpx;
+  letter-spacing: 2px;
+  color: black;
+  background-color: whitesmoke;
+  border-bottom: 1px solid green;
+}
+.login .form input:hover{
+  background: rgba(196, 194, 194, 0.4);
+}
+.login .form h3{
+  text-align: center;
+  color: black;
+  margin: 7px 0;
+  padding: 12px;
+}
+.login .form input::placeholder{
+  font-weight: 800;
+  font-size: 10px;
+  color: rgba(0, 56, 11, 0.4);
+}
+.login .form .btn{
+  margin: 10px auto 0;
+}
+.login .form .btn .links{
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: black;
+  border: 0.5px solid green;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.login .form .btn .links span{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  z-index: -1;
+  transition: .5s;
+}
+.login .form .btn .links:hover span{
+  width: 100%;
+}
+.login  .form .google{
+  margin: 2px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.login  .form .google .links{
+  width: 230px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 12px 0;
+  color: black;
+  border: 0.5px solid green;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.login  .form .google .links span{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  z-index: -1;
+  transition: .5s;
+}
+.login .form .google .links:hover span{
+  width: 100%;
+}
+/*profile page*/
+.container{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Montserrat',sans-serif;
+}
+.wrapper{
+  margin: 50px;
+  display: flex;  
+}
+.wrapper .profile{
+  width: 400px;
+  margin-right: 25px;
+}
+.wrapper .profile .profile-img-info{
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 500px;
+  margin-left: 100px;
+  box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
+}
+.wrapper .profile .profile-img-info .img{
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+}
+.wrapper .profile .profile-img-info .info{
+  width: calc(100% - 125px);
+  padding: 40px;
+}
+.wrapper .profile .profile-img-info .info p.name{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 1px solid green;
+}
+.wrapper .profile .profile-img-info .info p.place{
+  font-weight: 300px;
+  margin-bottom: 5px;
+}
+.wrapper .profile .profile-img-info .info p.name span{
+  margin-right: 5px;
+}
+.wrapper .profile .details{
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
+  width: 500px;
+  margin-left: 100px;
+}
+.wrapper .profile .details .personal-info{
+  padding-bottom: 20px;
+  border-bottom: 2px solid green;
+}
+.wrapper .profile .details .personal-info p{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.wrapper .profile .details .personal-info ul li{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.wrapper .profile .details .personal-info ul li .fas{
+  width: 50px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: darkgreen;
+  font-size: 20px;
+}
+.wrapper .profile .stuff{
+  padding: 10px;
+}
+.wrapper .profile .stuff span.tag{
+  background: #e4e9ef;
+  padding: 10px 20px;
+  display: inline-block;
+  box-shadow: 0 2px 3px rgba(34, 152, 27, 0.864);
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+.wrapper  .user-info{
+  background: #fff;
+  padding: 25px;
+  width: 700px;
+  margin-left: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
+}
+.wrapper  .user-info .user-info-wrap{
+  padding: 20px 0;
+  border-bottom: 2px solid green;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper  .user-info .user-info-wrap:first-child{
+  padding-top: 0;
+}
+.wrapper  .user-info .user-info-wrap:last-child{
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.wrapper  .user-info .user-info-wrap .item{
+  padding: 20px 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wrapper  .user-info .user-info-wrap .item .fas{
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.wrapper  .user-info .user-info-wrap .item .title{
+  font-size: 20px;
+}
+.wrapper  .user-info .user-info-wrap .item p{
+  font-size: 17px;
+  margin-right: 20px;
+  display: block;
+}
+.wrapper  .user-info .user-info-wrap .google{
+  margin: 3px auto 0;
+}
+.wrapper  .user-info .user-info-wrap .google .links{
+  width: 230px;
+  margin-right: 20px;
+  box-shadow: 0 2px 3px rgba(34, 152, 27, 0.864);
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 0;
+  color: black;
+  border: 0.5px solid green;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.wrapper  .user-info .user-info-wrap .google .links span{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  z-index: -1;
+  transition: .5s;
+}
+.wrapper  .user-info .user-info-wrap .google .links:hover span{
+  width: 100%;
+}
+/*Responsive part*/
+@media (min-width:768px){
+  .showcase .overlay h1{
+    font-size: 64px;
+  }
+.showcase .overlay p{
+  font-size: 22px;
+}
+.grid .grid-items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.grid .grid-items div img{
+  height: 150px;
+  width: 300px;
+}
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 998px) {
+  .showcase{
+    background-position: top;
+  }
+  .grid .grid-items{
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+  .login .form input{
+    width: 40vw;
+  }
 }
