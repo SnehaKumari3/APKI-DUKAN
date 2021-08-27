@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:wght@300;400;700&display=swap');
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
 img{
   max-width: 100%;
 }
@@ -13,6 +15,7 @@ ul{
 }
 body {  
   font-family: 'Montserrat',sans-serif;
+  
 }
 .header{
   display: flex;
@@ -31,11 +34,7 @@ body {
   margin-right: 7px;
 }
 .header .links:hover{
-  border: 1px solid black;
-  box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
-  padding: 9px;
-  margin: 5px;
-  border-radius: 6px;
+  color: greenyellow;
 }
 /*product*/
 .showcase{
@@ -49,7 +48,7 @@ body {
   justify-content: center;
   height: 650px;
   color: #fff;
-  background-color: rgba(245, 239, 239, 0.233);
+  margin: 30px auto;
 }
 .showcase .overlay h1{
   font-size: 40px;
@@ -73,6 +72,15 @@ body {
   transform: translateY(-10px);
   transition: all 0.4s;
   text-shadow: 0 2px 5px rgba(26, 95, 26, 0.864);
+}
+.showcase .overlay button{
+  width: 150px;
+  margin: 10px;
+  box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
+}
+.showcase .overlay button:hover{
+  color: greenyellow;
+  border: 1px solid black;
 }
 .grid{
   padding: 50px;
@@ -140,18 +148,21 @@ body {
 }
 /*Footer*/
 .footer div{
+  margin-top: auto;
   background-color: green;
   padding: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
+  text-transform: capitalize;
 }
 .footer h4{
   color: darkgreen;
   padding: 20px;
   text-align: center;
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: 'Montserrat',sans-serif;
 }
 .footer h4 .social-icons{
   margin-right: 10px;
@@ -179,7 +190,6 @@ body {
   letter-spacing: 1px;
 }
 .footer ul li button:hover{
-  font-weight: 1000;
   color: black;
   border: 1px solid black;
   box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
@@ -188,126 +198,154 @@ body {
   color: black;
 }
 /* login & signup*/
-.login .form {
-   display: flex;
-   border-radius: 20px;
-   padding: 20px;
-   flex-direction: column;
-   box-shadow: 0 3px 5px rgba(34, 152, 27, 0.864);
-   background: #fff;
-   font-family: Montserrat;
-}
-.login .browse{
-  background: transparent;
-  box-shadow: none;
-}
-.login .form input{
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 10px;
+
+
+button {
   border: none;
-  font-weight: 800;
-  font-size: 18pxpx;
-  letter-spacing: 2px;
-  color: black;
-  background-color: whitesmoke;
-  border-bottom: 1px solid green;
-}
-.login .form input:hover{
-  background: rgba(196, 194, 194, 0.4);
-}
-.login .form h3{
-  text-align: center;
-  color: black;
-  margin: 7px 0;
-  padding: 12px;
-}
-.login .form input::placeholder{
-  font-weight: 800;
-  font-size: 10px;
-  color: rgba(0, 56, 11, 0.4);
-}
-.login .form .btn{
-  margin: 10px auto 0;
-}
-.login .form .btn .links{
-  width: 150px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 10px;
-  padding: 12px 0;
-  color: black;
-  border: 0.5px solid green;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.login .form .btn .links span{
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  outline: none;
+  width: 170px;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
   background: green;
-  z-index: -1;
-  transition: .5s;
+  cursor: pointer;
 }
-.login .form .btn .links:hover span{
+
+.login  {
   width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(92, 189, 92,0.7)) ,url('./assets/image3.png') no-repeat center/cover;
+  display: flex;
 }
-.login  .form .google{
-  margin: 2px auto 0;
+.login .loginContainer {
+  padding: 30px 40px;
+  margin: auto;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 450px;
+  min-height: 370px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgb(53, 57, 53) 0%,
+    rgba(112, 193, 137, 0.9) 59%,
+    rgba(207, 213, 207, 0.9) 100%
+  );
+  box-shadow: 0 2px 3px rgba(76, 90, 73, 0.864);
 }
-.login  .form .google .links{
-  width: 230px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 5px 10px;
-  padding: 12px 0;
-  color: black;
-  border: 0.5px solid green;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+
+
+.login .loginContainer .welcome{
+  color: rgb(2, 54, 13);
+  font-size: 25px;
+  font-family: MonteCarlo;
+  word-spacing: 4px;
+  letter-spacing: 2px;
 }
-.login  .form .google .links span{
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: green;
-  z-index: -1;
-  transition: .5s;
+
+.login .loginContainer label {
+  color: rgb(2, 54, 13);
+  font-weight: 520;
+  margin: 14px 0;
+  display: block;
+  font-size: 20px;
+  line-height: 1;
 }
-.login .form .google .links:hover span{
+.login .loginContainer label .fas{
+  margin-right: 10px;
+}
+.login .loginContainer input {
   width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  background: rgba(220, 216, 216, 0.816);
+  border-radius: 5px;
+  border-bottom: 2px solid rgb(60, 155, 60);
+  color: rgb(7, 61, 18);
+  letter-spacing: 1px;
 }
+.login .loginContainer .btnContainer {
+  width: 100%;
+  padding: 24px 0;
+  text-align: center;
+}
+.login .loginContainer .btnContainer p {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: #fff;
+  font-family: MonteCarlo;
+  font-size: 30px;
+}
+.login .loginContainer .btnContainer p span {
+  color: blue;
+  font-family: MonteCarlo;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+.login .loginContainer .btnContainer p span:hover {
+  color: red;
+}
+.login .loginContainer .errorMsg {
+  color: red;
+  font-size: 17px;
+}
+
+/*PROFILE DEMO*/
+
+
+
 /*profile page*/
-.container{
-  margin: 0 ;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
+.hero{
+  width: 100vw;
+  height: 100vh;
   font-family: 'Montserrat',sans-serif;
 }
 .wrapper{
-  margin: 50px;
-  display: flex;  
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.2s linear;
+  flex-wrap: wrap;
 }
 .wrapper .profile{
-  width: 400px;
-  margin-right: 25px;
+  height: auto;
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+@media (max-width:768px){
+  .hero{
+    height: auto;
+  }
+  .wrapper .profile .profile-img-info{
+    margin-bottom: 2px;
+  }
+  .wrapper  .user-info{
+    padding: 25px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
+  }
 }
 .wrapper .profile .profile-img-info{
   display: flex;
   background: #fff;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 500px;
-  margin-left: 100px;
   box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
 }
 .wrapper .profile .profile-img-info .img{
@@ -317,7 +355,7 @@ body {
 }
 .wrapper .profile .profile-img-info .info{
   width: calc(100% - 125px);
-  padding: 40px;
+  padding: 20px;
 }
 .wrapper .profile .profile-img-info .info p.name{
   font-size: 24px;
@@ -338,7 +376,6 @@ body {
   padding: 25px;
   box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
   width: 500px;
-  margin-left: 100px;
 }
 .wrapper .profile .details .personal-info{
   padding-bottom: 20px;
@@ -377,8 +414,7 @@ body {
 .wrapper  .user-info{
   background: #fff;
   padding: 25px;
-  width: 700px;
-  margin-left: 200px;
+  width: 600px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(34, 152, 27, 0.864);
 }
@@ -415,11 +451,11 @@ body {
   margin-right: 20px;
   display: block;
 }
-.wrapper  .user-info .user-info-wrap .google{
+.wrapper  .profile .user-info  .google{
   margin: 3px auto 0;
 }
-.wrapper  .user-info .user-info-wrap .google .links{
-  width: 230px;
+.wrapper  .profile .user-info   .google .links{
+  width: 150px;
   margin-right: 20px;
   box-shadow: 0 2px 3px rgba(34, 152, 27, 0.864);
   text-decoration: none;
@@ -431,7 +467,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.wrapper  .user-info .user-info-wrap .google .links span{
+.wrapper  .profile .user-info  .google .links span{
   width: 0;
   height: 100%;
   position: absolute;
@@ -441,9 +477,13 @@ body {
   z-index: -1;
   transition: .5s;
 }
-.wrapper  .user-info .user-info-wrap .google .links:hover span{
+.wrapper  .profile .user-info  .google .links:hover span{
   width: 100%;
 }
+
+
+
+
 /*Responsive part*/
 @media (min-width:768px){
   .showcase .overlay h1{
@@ -461,8 +501,9 @@ body {
   height: 150px;
   width: 300px;
 }
-}
 
+
+}
 @media (min-width: 998px) {
   .showcase{
     background-position: top;
@@ -470,8 +511,6 @@ body {
   .grid .grid-items{
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
-  }
-  .login .form input{
-    width: 40vw;
-  }
+  } 
+  
 }

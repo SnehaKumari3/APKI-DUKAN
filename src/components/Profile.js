@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import image8 from '../assets/image8.png'
 
 
-const Profile = () => {
+
+const Profile = ({handleLogout}) => {
     return (
-        <>  <div className="container">
+        <>
+        <div className="hero">
             <div className="wrapper">
                 <div className="profile">
                     <div className="profile-img-info">
@@ -44,56 +46,60 @@ const Profile = () => {
                             <span className="tag">Track order</span>
                             <span className="tag">FAQs</span>
                             <span className="tag">Help Desk</span>
-
                         </div>
+
                     </div>
                 </div>
-                <div className="user-info">
-                    <div className="user-info-wrap">
-                        <div className="item">
-                            <div className="icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div className="title">Adress</div>
+
+                <div className="profile">
+                    <div className="user-info">
+                        <div className="user-info-wrap">
+                            <div className="item">
+                                <div className="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div className="title">Adress</div>
+                            </div>
+                            <div className="item">
+                                <p>Tn. N. Suprato</p>
+                                <p>JI. Denpasar Raya No. 3 Blok A13 Kuningam</p>
+                                <p>Jakarta Selatan 12345</p>
+                                <p></p>
+                            </div>
                         </div>
-                        <div className="item">
-                            <p>Tn. N. Suprato</p>
-                            <p>JI. Denpasar Raya No. 3 Blok A13 Kuningam</p>
-                            <p>Jakarta Selatan 12345</p>
-                            <p></p>
+                        <div className="user-info-wrap">
+                            <div className="item">
+                                <div className="icon"><i class="fas fa-credit-card"></i></div>
+                                <div className="title">Payments</div>
+                            </div>
+                            <div className="item">
+                                <p>Card Number : ************654</p>
+                                <p>JExpiry Date : 12 / 23</p>
+                                <p>CVV Number : 123</p>
+                                <p>250 North Texas 77094 Bihar , INDIA</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="user-info-wrap">
-                        <div className="item">
-                            <div className="icon"><i class="fas fa-credit-card"></i></div>
-                            <div className="title">Payments</div>
+                        <div className="user-info-wrap">
+                            <div className="item">
+                                <div className="icon"><i class="fas fa-id-card-alt"></i></div>
+                                <div className="title">Identification</div>
+                            </div>
+                            <div className="item">
+                                <p>Tn. N. Suprato</p>
+                                <p>JI. Denpasar Raya No. 3 Blok A13</p>
+                                <p>Kuningam</p>
+                                <p>Jakarta Selatan 12345</p>
+                            </div>
                         </div>
-                        <div className="item">
-                            <p>Card Number : ************654</p>
-                            <p>JExpiry Date : 12 / 23</p>
-                            <p>CVV Number : 123</p>
-                            <p>250 North Texas 77094 Bihar , INDIA</p>
-                        </div>
-                    </div>
-                    <div className="user-info-wrap">
-                        <div className="item">
-                            <div className="icon"><i class="fas fa-id-card-alt"></i></div>
-                            <div className="title">Identificatio</div>
-                        </div>
-                        <div className="item">
-                            <p>Tn. N. Suprato</p>
-                            <p>JI. Denpasar Raya No. 3 Blok A13</p>
-                            <p>Kuningam</p>
-                            <p>Jakarta Selatan 12345</p>
-                        </div>
-                    </div>
-                    <div className="user-info-wrap">
+                        <div className="user-info-wrap">
                         <div className="google">
-                            <Link className="links google" to="/profile"><span></span> Edit Information</Link>
-                            <Link className="links google" to="/"><span></span>Deactivate Account</Link>
+                            <Link className="links" onClick={handleLogout}><span></span>Log Out</Link>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+        
         </>
     )
 }

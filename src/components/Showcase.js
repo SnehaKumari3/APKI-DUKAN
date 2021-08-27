@@ -7,11 +7,7 @@ const Showcase = () => {
                 <div className="overlay">
                     <h1>Welcome To Apki Dukan</h1>
                     <p>Online Stores Of Daily Needs Product</p>
-                    <form className="form browse">
-                    <div className="btn">
-                    <Link className="links" to="/"><span></span><i class="fal fa-stars"></i>Shop Now</Link>
-                    </div>
-                    </form>
+                    <button className="home">Shop Now</button>
                 </div>
             </section>
         </>
