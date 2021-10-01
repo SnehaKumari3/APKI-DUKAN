@@ -15,9 +15,9 @@ const Footer = () => {
           <li><button>Our Offerings</button></li>
         </ul>
         <ul>
-          <li><button><a href="#"><i class="fab fa-google social-icons"></i></a></button></li>
-          <li><button><a href="#"><i class="fab fa-twitter social-icons"></i></a></button></li>
-          <li><button><a href="#"><i class="fab fa-facebook-f social-icons"></i></a></button></li>
+          <li><button><a href="\"><i class="fab fa-google social-icons"></i></a></button></li>
+          <li><button><a href="\"><i class="fab fa-twitter social-icons"></i></a></button></li>
+          <li><button><a href="\"><i class="fab fa-facebook-f social-icons"></i></a></button></li>
         </ul>
         <ul>
           <li><button>Help Desk</button></li>
